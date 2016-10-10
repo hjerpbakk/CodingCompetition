@@ -13,12 +13,12 @@ namespace TheProblems
     [TestClass]
     public class Problems
     {
-        private ItDagene2016 yourSolution;
+        private Solution yourSolution;
 
-        [TestMethod]
+        [TestInitialize]
         public void SetUp()
         {
-            yourSolution = new ItDagene2016();
+            yourSolution = new Solution();
         }
 
         [TestMethod]
@@ -57,24 +57,33 @@ namespace TheProblems
             Succeeded(4);
         }
 
-        #region Helpers
-        private int[] results;
-
-        [TestInitialize]
-        public void ClassSetup()
+        [TestMethod]
+        public void FifthTest()
         {
-            results = new int[4];
+            var nthPrime = yourSolution.NthPrime(1000);
+
+            Assert.AreEqual(7919, nthPrime);
+            Succeeded(5);
         }
 
-        [TestCleanup]
-        public void ClassTearDown()
+        #region Helpers
+        private static int[] results;
+
+        [ClassInitialize]
+        public static void ClassSetup(TestContext notUsed)
         {
-            new Communicator().Write(string.Join<int>(",", (IEnumerable<int>)this.results));
+            results = new int[5];
+        }
+
+        [ClassCleanup]
+        public static void ClassTearDown()
+        {
+            new Communicator().Write(string.Join<int>(",", (IEnumerable<int>)results));
         }
 
         protected void Succeeded(int n)
         {
-            int[] results = this.results;
+            //int[] results = results;
             int num1 = n - 1;
             n = num1;
             int index = num1;
