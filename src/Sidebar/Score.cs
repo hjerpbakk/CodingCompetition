@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace NDC2015
+namespace Sidebar
 {
     [Serializable]
     public struct Score
@@ -14,13 +14,12 @@ namespace NDC2015
             Phone = phone;
         }
 
-        public readonly TimeSpan ElapsedTime;
+        public TimeSpan ElapsedTime { get; }
         public string ContestantName { get; }
-        public readonly string Phone;
+        public string Phone { get; }
 
-        public string FriendlyElapsedTime
-        {
-            get { return ElapsedTime.ToString(Leaderboard.ElapsedFormatString); }
-        }
+        public string FriendlyElapsedTime => ElapsedTime.ToString(Leaderboard.ElapsedFormatString);
+
+        public override string ToString() => $"{ContestantName} - {Phone}";
     }
 }

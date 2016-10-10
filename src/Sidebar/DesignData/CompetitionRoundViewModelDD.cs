@@ -1,4 +1,4 @@
-﻿namespace NDC2015.DesignData
+﻿namespace Sidebar.DesignData
 {
     class CompetitionRoundViewModelDD : CompetitionRoundViewModel
     {

@@ -1,20 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
-using System.Windows.Documents;
 using Newtonsoft.Json;
 using Runner;
 
-namespace NDC2015
+namespace Sidebar
 {
     public class Scores
     {
         public static readonly string LeaderBoardPath;
+
         private static readonly string scoresPath;
 
-        public List<Score> TheScores;
+        private static readonly Random randomGenerator;
 
         static Scores()
         {
@@ -24,6 +24,7 @@ namespace NDC2015
             CreateFileIfNeeded(scoresPath);
             CopyFileIfNeeded("leaderboard.css");
             CopyFileIfNeeded("logo.png");
+            randomGenerator = new Random();
         }
 
         public Scores()
@@ -31,6 +32,8 @@ namespace NDC2015
             GetPreviousScores();
             WriteLeaderBoard();
         }
+
+        public List<Score> TheScores { get; private set; }
 
         public int Save(Score score)
         {
@@ -40,6 +43,12 @@ namespace NDC2015
             File.WriteAllText(scoresPath, JsonConvert.SerializeObject(TheScores), Encoding.UTF8);
             WriteLeaderBoard(position);
             return position;
+        }
+
+        public Score DrawWinner()
+        {
+            var luckyNumber = randomGenerator.Next(TheScores.Count);
+            return TheScores[luckyNumber];
         }
 
         private void WriteLeaderBoard(int position = 0)

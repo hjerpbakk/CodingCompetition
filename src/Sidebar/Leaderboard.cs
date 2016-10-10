@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace NDC2015
+namespace Sidebar
 {
     public class Leaderboard
     {

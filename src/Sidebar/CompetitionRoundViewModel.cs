@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
+using System.Windows;
 using System.Windows.Threading;
+using NDC2015;
 using Runner;
+using Sidebar;
 
-namespace NDC2015
+namespace Sidebar
 {
     public class CompetitionRoundViewModel : ViewModelBase, ICompetition
     {
@@ -37,9 +41,14 @@ namespace NDC2015
 
             Scores = new RangeObservableCollection<Score>();
             Scores.AddRange(scores.TheScores);
+
+            OpenLeaderboardCommand = new DelegateCommand(o => OpenLeaderboard());
+            DrawWinnerCommand = new DelegateCommand(o => DrawWinner());
         }
 
-        public RoundAdminViewModel RoundAdminViewModel { get; private set; }
+        public RoundAdminViewModel RoundAdminViewModel { get; }
+        public DelegateCommand OpenLeaderboardCommand { get; }
+        public DelegateCommand DrawWinnerCommand { get; }
 
         public ObservableCollection<TestResultViewModel> TestResults
         {
@@ -92,6 +101,14 @@ namespace NDC2015
         public void StartRound()
         {
             uiUpdateTimer.Start();
+        }
+
+        private static void OpenLeaderboard() => Process.Start(Sidebar.Scores.LeaderBoardPath);
+
+        private void DrawWinner()
+        {
+            var winner = scores.DrawWinner();
+            MessageBox.Show(winner.ToString(), "The winner is...");
         }
     }
 

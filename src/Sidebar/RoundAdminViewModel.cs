@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Threading;
+using NDC2015;
 
-namespace NDC2015
+// ReSharper disable ExplicitCallerInfoArgument
+
+namespace Sidebar
 {
     public class RoundAdminViewModel : ViewModelBase
     {
@@ -31,7 +34,7 @@ namespace NDC2015
             StartCommand = new DelegateCommand(o => !string.IsNullOrEmpty(contestant) &&
                                                 !string.IsNullOrEmpty(phone), StartRound);
             ButtonTwoCommand = new DelegateCommand(o => enableButtonTwo, EndRound);
-
+            
             stopWatch = new Stopwatch();
             uiUpdateTimer = new DispatcherTimer();
             uiUpdateTimer.Tick += UpdateElapsedTime;
@@ -40,8 +43,8 @@ namespace NDC2015
             ButtonText = RunningText;
         }
 
-        public DelegateCommand StartCommand { get; private set; }
-        public DelegateCommand ButtonTwoCommand { get; private set; }
+        public DelegateCommand StartCommand { get; }
+        public DelegateCommand ButtonTwoCommand { get; }
 
         public string Contestant
         {
@@ -81,10 +84,7 @@ namespace NDC2015
             set { Set(ref showSummary, value); }
         }
 
-        public bool Running
-        {
-            get { return stopWatch.IsRunning; }
-        }
+        public bool Running => stopWatch.IsRunning;
 
         public string ElapsedTime { get; private set; }
 
@@ -98,7 +98,7 @@ namespace NDC2015
 
             enableButtonTwo = true;
             ButtonTwoCommand.OnCanExecuteChanged();
-            OnPropertyChanged("Running");
+            OnPropertyChanged(nameof(Running));
         }
 
         private void EndRound(object obj)
@@ -132,14 +132,14 @@ namespace NDC2015
                 competition.ResetTests();
                 Contestant = "";
                 Phone = "";
-                OnPropertyChanged("Running");
+                OnPropertyChanged(nameof(Running));
             }
         }
         
         private void UpdateElapsedTime(object sender, EventArgs e)
         {
             ElapsedTime = stopWatch.Elapsed.ToString(Leaderboard.ElapsedFormatString);
-            OnPropertyChanged("ElapsedTime");
+            OnPropertyChanged(nameof(ElapsedTime));
         }
     }
 }
