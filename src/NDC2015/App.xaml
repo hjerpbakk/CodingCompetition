@@ -1,0 +1,9 @@
+﻿<Application x:Class="NDC2015.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NDC2015"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Thickness x:Key="commonMargin" Left="0" Right="0" Top="0" Bottom="10" />
+    </Application.Resources>
+</Application>

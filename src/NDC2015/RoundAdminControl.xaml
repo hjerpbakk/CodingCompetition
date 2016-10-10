@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="NDC2015.RoundAdminControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NDC2015"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance local:RoundAdminViewModel}">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <local:ReverseBooleanToVisibilityConverter x:Key="ReverseBooleanToVisibilityConverter" />
+    </UserControl.Resources>
+    <StackPanel>
+        <Grid Visibility="{Binding Running, Converter={StaticResource ReverseBooleanToVisibilityConverter}}" Height="76">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="col2" />
+                <ColumnDefinition Width="*" SharedSizeGroup="col1" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Content="Name" VerticalAlignment="Center" HorizontalAlignment="Right"  />
+            <TextBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Text="{Binding Contestant, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <Label Grid.Row="1" Grid.Column="0" Content="Mobile" VerticalAlignment="Center" HorizontalAlignment="Right"  />
+            <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Text="{Binding Phone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  />
+            <Button Grid.Row="2" Grid.Column="0" Content="Start" Command="{Binding StartCommand}" Grid.ColumnSpan="2" Margin="0,3,0,0" />
+        </Grid>
+        <StackPanel Visibility="{Binding Running, Converter={StaticResource BooleanToVisibilityConverter}}" Height="76" >
+            <Label Content="{Binding ElapsedTime}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

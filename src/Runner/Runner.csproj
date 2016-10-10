@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D2FD20C-9A8C-4247-8443-7929F8EC2322}</ProjectGuid>
+    <ProjectGuid>{59A03DED-0BAE-4A65-94F7-6252C944BAAA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestDIPS.Competition</RootNamespace>
-    <AssemblyName>TestDIPS.Competition</AssemblyName>
+    <RootNamespace>Runner</RootNamespace>
+    <AssemblyName>Runner</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,9 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Runner">
-      <HintPath>..\lib\Runner.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -53,14 +50,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="TheTests.cs" />
+    <Compile Include="TestBase.cs" />
+    <Compile Include="Communicator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DIPS.Competition\DIPS.Competition.csproj">
-      <Project>{cccd9036-b3d1-4b3b-81dc-b246313a949c}</Project>
-      <Name>DIPS.Competition</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
