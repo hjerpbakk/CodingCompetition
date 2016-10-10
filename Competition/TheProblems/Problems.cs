@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Runner;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NDC2015.Competition;
+using TheSolution;
 
 namespace TheProblems
 {
