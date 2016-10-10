@@ -35,8 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Runner">
-      <HintPath>..\lib\Runner.dll</HintPath>
+    <Reference Include="Runner, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sidebar\Runner.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -57,7 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NDC2015-Competition\TheSolution.csproj">
+    <ProjectReference Include="..\TheSolution\TheSolution.csproj">
       <Project>{cccd9036-b3d1-4b3b-81dc-b246313a949c}</Project>
       <Name>TheSolution</Name>
     </ProjectReference>
