@@ -72,8 +72,11 @@
     <Compile Include="DelegateCommand.cs" />
     <Compile Include="DesignData\CompetitionRoundViewModelDD.cs" />
     <Compile Include="DesignData\TestResultViewModelDD.cs" />
+    <Compile Include="DrawWinnerWindow.xaml.cs">
+      <DependentUpon>DrawWinnerWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Leaderboard.cs" />
-    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="PasswordHelper.cs" />
     <Compile Include="RangeObservableCollection.cs" />
     <Compile Include="Scores.cs" />
     <Compile Include="Score.cs" />
@@ -87,6 +90,11 @@
       <DependentUpon>TestResult.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModelBase.cs" />
+    <Compile Include="WinnerViewModel.cs" />
+    <Page Include="DrawWinnerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

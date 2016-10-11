@@ -1,8 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using NDC2015.Annotations;
 
-namespace NDC2015
+namespace Sidebar
 {
     public class ViewModelBase : INotifyPropertyChanged
     {
@@ -14,14 +13,7 @@ namespace NDC2015
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            var propertyChanged = PropertyChanged;
-            if (propertyChanged != null)
-            {
-                propertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null) =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }

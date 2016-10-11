@@ -47,8 +47,20 @@ namespace Sidebar
 
         public Score DrawWinner()
         {
+            if (TheScores.Count == 0)
+            {
+                return new Score(TimeSpan.Zero, "Ingen deltagere", "");
+            }
+
             var luckyNumber = randomGenerator.Next(TheScores.Count);
             return TheScores[luckyNumber];
+        }
+
+        public void EndCompetition()
+        {
+            TheScores = new List<Score>();
+            File.Delete(LeaderBoardPath);
+            File.Delete(scoresPath);
         }
 
         private void WriteLeaderBoard(int position = 0)

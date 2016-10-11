@@ -107,9 +107,16 @@ namespace Sidebar
 
         private void DrawWinner()
         {
-            var winner = scores.DrawWinner();
-            MessageBox.Show(winner.ToString(), "The winner is...");
-        }
+            var drawWinnerWindow = new DrawWinnerWindow();
+            Action endCompetiton = () =>
+            {
+                Scores.Clear();
+                drawWinnerWindow.Close();
+            };
+
+            drawWinnerWindow.DataContext = new WinnerViewModel(scores, endCompetiton);
+            drawWinnerWindow.ShowDialog();
+        }       
     }
 
     public interface ICompetition
