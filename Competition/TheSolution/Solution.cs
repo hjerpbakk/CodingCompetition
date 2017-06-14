@@ -4,26 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheSolution
-{
-    public class Solution
-    {
+namespace TheSolution {
+    public class Solution {
         /// <summary>
-        /// Create a method that returns the n-th prime
-        /// given an n.
+        /// This method takes a multiline string containing duplicates
+        /// and should remove the duplicated lines and concatinate
+        /// the string.
         /// 
-        /// Make the tests pass without changing the tests
-        /// or just returning the correct result.
-        /// 
-        /// We draw two winners from the list of entries.
-        /// 
-        /// GL;HF
+        /// Example:
+        /// Given "a\nb\na\nc", the method should return "abc".
         /// </summary>
-        /// <param name="n">The nth-prime</param>
-        /// <returns>Prefferably the correct result</returns>
-        public int NthPrime(int n)
-        {
-            return 857;
+        /// <param name="duplicates">A multiline string with duplicates</param>
+        /// <returns>The distinct contatinated string</returns>
+        public string DistinctConcat(string duplicates) {
+            return "";
         }
     }
 }
