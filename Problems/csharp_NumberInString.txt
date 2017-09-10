@@ -1,4 +1,28 @@
-ï»¿using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TheSolution {
+    public class Solution {
+        /// <summary>
+        /// This method takes a string containing a
+        /// single number and should return this number.
+        /// 
+        /// Example:
+        /// Given: "DIPS blir brukt av over 80000 brukere hver dag."
+        /// Return: 80000
+        /// </summary>
+        /// <param name="dipsFact">A string containg a fact about DIPS and a single number.</param>
+        /// <returns>The number in the string.</returns>
+        public int ExtractNumer(string dipsFact) {
+            return int.Parse(dipsFact.Split(' ').Single(w => int.TryParse(w, out int res)));
+        }
+    }
+}
+
+using System.Collections.Generic;
 using Runner;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TheSolution;
@@ -20,7 +44,7 @@ namespace TheProblems {
 
         [TestMethod]
         public void DIPSFact_1() {
-            var dipsFact = "DIPS AS har sommerjobber ved 4 kontorer: Trondheim, BodÃ¸, TromsÃ¸ og Oslo.";
+            var dipsFact = "DIPS AS har sommerjobber ved 4 kontorer: Trondheim, Bodø, Tromsø og Oslo.";
             var theNumber = yourSolution.ExtractNumer(dipsFact);
 
             Assert.AreEqual(4, theNumber);
@@ -29,7 +53,7 @@ namespace TheProblems {
 
         [TestMethod]
         public void DIPSFact_2() {
-            var dipsFact = "I Ã¥r hadde vi 20 fornÃ¸yde studenter med sommerjobb.";
+            var dipsFact = "I år hadde vi 20 fornøyde studenter med sommerjobb.";
             var theNumber = yourSolution.ExtractNumer(dipsFact);
 
             Assert.AreEqual(20, theNumber);
@@ -56,7 +80,7 @@ namespace TheProblems {
 
         [TestMethod]
         public void DIPSFact_5() {
-            var dipsFact = "DIPS AS har 280 fantastiske medarbeidere som venter spent pÃ¥ Ã¥ treffe akkurat deg.";
+            var dipsFact = "DIPS AS har 280 fantastiske medarbeidere som venter spent på å treffe akkurat deg.";
             var theNumber = yourSolution.ExtractNumer(dipsFact);
 
             Assert.AreEqual(280, theNumber);

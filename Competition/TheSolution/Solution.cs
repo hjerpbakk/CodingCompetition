@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 namespace TheSolution {
     public class Solution {
         /// <summary>
-        /// This method takes a multiline string containing duplicates
-        /// and should remove the duplicated lines and concatinate
-        /// the string.
+        /// This method takes a string containing a
+        /// single number and should return this number.
         /// 
         /// Example:
-        /// Given "a\nb\na\nc", the method should return "abc".
+        /// Given: "DIPS blir brukt av over 80000 brukere hver dag."
+        /// Return: 80000
         /// </summary>
-        /// <param name="duplicates">A multiline string with duplicates</param>
-        /// <returns>The distinct contatinated string</returns>
-        public string DistinctConcat(string duplicates) {
-            return "";
+        /// <param name="dipsFact">A string containg a fact about DIPS and a single number.</param>
+        /// <returns>The number in the string.</returns>
+        public int ExtractNumer(string dipsFact) {
+            return 0;
         }
     }
 }
