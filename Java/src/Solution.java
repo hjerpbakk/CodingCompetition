@@ -11,14 +11,6 @@ public class Solution {
      * @return The number in the string.
      */
     public int extractNumber(String dipsFact) {
-        String[] splitString = dipsFact.split(" ");
-        for (String word :
-                splitString) {
-            if (word.matches("^-?\\d+$")) {
-                return Integer.parseInt(word);
-            }
-        }
-
         return 0;
     }
 }
