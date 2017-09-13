@@ -20,7 +20,7 @@ class Problems(unittest.TestCase):
 		dips_fact = "DIPS AS har hatt bursdag og i år fylte vi 30 :)"
 		number = extractNumber(dips_fact)
 
-		self.assertEqual(20, number)
+		self.assertEqual(30, number)
 		Problems.testBase.Succeeded(2)
 
 	def test_dips_fact_3(self):
