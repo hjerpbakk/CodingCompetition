@@ -8,4 +8,4 @@ import re
 # Given: "DIPS blir brukt av over 80000 brukere hver dag."
 # Return: 80000
 def extractNumber(dips_fact):
-	return 0
+    return 0
