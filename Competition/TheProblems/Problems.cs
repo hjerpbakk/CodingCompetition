@@ -20,16 +20,16 @@ namespace TheProblems {
 
         [TestMethod]
         public void DIPSFact_1() {
-            var dipsFact = "DIPS AS har sommerjobber ved 4 kontorer: Trondheim, Bodø, Tromsø og Oslo.";
+            var dipsFact = "DIPS AS har 6 kontorer: Trondheim, Bodø, Tromsø, Oslo, Bergen og Stockholm.";
             var theNumber = yourSolution.ExtractNumer(dipsFact);
 
-            Assert.AreEqual(4, theNumber);
+            Assert.AreEqual(6, theNumber);
             Succeeded(1);
         }
 
         [TestMethod]
         public void DIPSFact_2() {
-            var dipsFact = "I år hadde vi 20 fornøyde studenter med sommerjobb.";
+            var dipsFact = "DIPS AS har hatt bursdag og i år fylte vi 30 :)";
             var theNumber = yourSolution.ExtractNumer(dipsFact);
 
             Assert.AreEqual(20, theNumber);

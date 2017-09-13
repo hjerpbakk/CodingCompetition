@@ -10,14 +10,14 @@ class Problems(unittest.TestCase):
 		cls.testBase = TestBase()
 
 	def test_dips_fact_1(self):
-		dips_fact = "DIPS AS har sommerjobber ved 4 kontorer: Trondheim, Bodø, Tromsø og Oslo."
+		dips_fact = "DIPS AS har 6 kontorer: Trondheim, Bodø, Tromsø, Oslo, Bergen og Stockholm."
 		number = extractNumber(dips_fact)
 
-		self.assertEqual(4, number)
+		self.assertEqual(6, number)
 		Problems.testBase.Succeeded(1)
 
 	def test_dips_fact_2(self):
-		dips_fact = "I år hadde vi 20 fornøyde studenter med sommerjobb."
+		dips_fact = "DIPS AS har hatt bursdag og i år fylte vi 30 :)"
 		number = extractNumber(dips_fact)
 
 		self.assertEqual(20, number)

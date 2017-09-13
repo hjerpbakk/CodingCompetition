@@ -16,19 +16,19 @@ public class Problems {
 
     @Test
     public void DIPS_Fact_1() throws Exception {
-        String dips_fact = "DIPS AS har sommerjobber ved 4 kontorer: Trondheim, Bodø, Tromsø og Oslo.";
+        String dips_fact = "DIPS AS har 6 kontorer: Trondheim, Bodø, Tromsø, Oslo, Bergen og Stockholm.";
         int number = solution.extractNumber(dips_fact);
 
-        Assert.assertEquals(4, number);
+        Assert.assertEquals(6, number);
         Succeeded(1);
     }
 
     @Test
     public void DIPS_Fact_2() throws Exception {
-        String dips_fact = "I år hadde vi 20 fornøyde studenter med sommerjobb.";
+        String dips_fact = "DIPS AS har hatt bursdag og i år fylte vi 30 :)";
         int number = solution.extractNumber(dips_fact);
 
-        Assert.assertEquals(20, number);
+        Assert.assertEquals(30, number);
         Succeeded(2);
     }
 

@@ -14,7 +14,8 @@ namespace TheSolution {
         /// Given: "DIPS blir brukt av over 80000 brukere hver dag."
         /// Return: 80000
         /// </summary>
-        /// <param name="dipsFact">A string containg a fact about DIPS and a single number.</param>
+        /// <param name="dipsFact">A string containg a fact about DIPS 
+        /// and a single number.</param>
         /// <returns>The number in the string.</returns>
         public int ExtractNumer(string dipsFact) {
             return 0;
