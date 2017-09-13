@@ -32,7 +32,7 @@ namespace TheProblems {
             var dipsFact = "DIPS AS har hatt bursdag og i år fylte vi 30 :)";
             var theNumber = yourSolution.ExtractNumer(dipsFact);
 
-            Assert.AreEqual(20, theNumber);
+            Assert.AreEqual(30, theNumber);
             Succeeded(2);
         }
 
