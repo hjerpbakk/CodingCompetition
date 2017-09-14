@@ -4,21 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheSolution {
-    public class Solution {
+namespace TheSolution
+{
+    public class Solution
+    {
         /// <summary>
-        /// This method takes a string containing a
-        /// single number and should return this number.
+        /// This method takes a multiline string containing duplicates
+        /// and should remove the duplicated lines and concatinate
+        /// the string.
         /// 
         /// Example:
-        /// Given: "DIPS blir brukt av over 80000 brukere hver dag."
-        /// Return: 80000
+        /// Given "a\nb\na\nc", the method should return "abc".
         /// </summary>
-        /// <param name="dipsFact">A string containg a fact about DIPS 
-        /// and a single number.</param>
-        /// <returns>The number in the string.</returns>
-        public int ExtractNumer(string dipsFact) {
-            return 0;
+        /// <param name="duplicates">A multiline string with duplicates</param>
+        /// <returns>The distinct contatinated string</returns>
+        public string DistinctConcat(string duplicates)
+        {
+            return "";
         }
     }
 }

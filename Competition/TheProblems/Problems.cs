@@ -3,63 +3,81 @@ using Runner;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TheSolution;
 
-namespace TheProblems {
+namespace TheProblems
+{
     /// <summary>
     /// The tests.
     /// 
     /// Do not change this class.
     /// </summary>
     [TestClass]
-    public class Problems {
+    public class Problems
+    {
         private Solution yourSolution;
 
         [TestInitialize]
-        public void SetUp() {
+        public void SetUp()
+        {
             yourSolution = new Solution();
         }
 
         [TestMethod]
-        public void DIPSFact_1() {
-            var dipsFact = "DIPS AS har 6 kontorer: Trondheim, Bodø, Tromsø, Oslo, Bergen og Stockholm.";
-            var theNumber = yourSolution.ExtractNumer(dipsFact);
+        public void FirstTest()
+        {
+            var distinctConcat = yourSolution.DistinctConcat("DIPS AS is a great place to work");
 
-            Assert.AreEqual(6, theNumber);
+            Assert.AreEqual("DIPS AS is a great place to work", distinctConcat);
             Succeeded(1);
         }
 
         [TestMethod]
-        public void DIPSFact_2() {
-            var dipsFact = "DIPS AS har hatt bursdag og i år fylte vi 30 :)";
-            var theNumber = yourSolution.ExtractNumer(dipsFact);
+        public void SecondTest()
+        {
+            var distinctConcat = yourSolution.DistinctConcat(
+                "DIPS AS is a great place to work. \n" +
+                "We have open positions");
 
-            Assert.AreEqual(30, theNumber);
+            Assert.AreEqual("DIPS AS is a great place to work. We have open positions", distinctConcat);
             Succeeded(2);
         }
 
         [TestMethod]
-        public void DIPSFact_3() {
-            var dipsFact = "DIPS AS lager pasientdatasystemer for 85 % av det norske markedet.";
-            var theNumber = yourSolution.ExtractNumer(dipsFact);
+        public void ThirdTest()
+        {
+            var distinctConcat = yourSolution.DistinctConcat(
+                "DIPS AS is a great place to work. \n" +
+                "We have open positions \n" +
+                "in Trondheim, Bodø, Oslo and Tromsø");
 
-            Assert.AreEqual(85, theNumber);
+            Assert.AreEqual("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø", distinctConcat);
             Succeeded(3);
         }
 
         [TestMethod]
-        public void DIPSFact_4() {
-            var dipsFact = "DIPS blir brukt av over 80000 brukere hver dag.";
-            var theNumber = yourSolution.ExtractNumer(dipsFact);
+        public void FourthTest()
+        {
+            var distinctConcat = yourSolution.DistinctConcat(
+                "DIPS AS is a great place to work. \n" +
+                "We have open positions \n" +
+                "in Trondheim, Bodø, Oslo and Tromsø\n" +
+                "in Trondheim, Bodø, Oslo and Tromsø");
 
-            Assert.AreEqual(80000, theNumber);
+            Assert.AreEqual("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø", distinctConcat);
             Succeeded(4);
         }
 
         [TestMethod]
-        public void DIPSFact_5() {
-            var dipsFact = "DIPS AS har 280 fantastiske medarbeidere som venter spent på å treffe akkurat deg.";
-            var theNumber = yourSolution.ExtractNumer(dipsFact);
+        public void FifthTest()
+        {
+            var distinctConcat = yourSolution.DistinctConcat(
+                "DIPS AS is a great place to work. \n" +
+                "DIPS AS is a great place to work. \n" +
+                "We have open positions \n" +
+                "in Trondheim, Bodø, Oslo and Tromsø. \n" +
+                "in Trondheim, Bodø, Oslo and Tromsø. \n" +
+                "Come join us!");
 
-            Assert.AreEqual(280, theNumber);
+            Assert.AreEqual("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø. Come join us!", distinctConcat);
             Succeeded(5);
         }
 
@@ -68,16 +86,19 @@ namespace TheProblems {
         private static int[] results;
 
         [ClassInitialize]
-        public static void ClassSetup(TestContext notUsed) {
+        public static void ClassSetup(TestContext notUsed)
+        {
             results = new int[5];
         }
 
         [ClassCleanup]
-        public static void ClassTearDown() {
-            new Communicator().Write(string.Join<int>(",", (IEnumerable<int>) results));
+        public static void ClassTearDown()
+        {
+            new Communicator().Write(string.Join<int>(",", (IEnumerable<int>)results));
         }
 
-        protected void Succeeded(int n) {
+        protected void Succeeded(int n)
+        {
             //int[] results = results;
             int num1 = n - 1;
             n = num1;
