@@ -31,7 +31,7 @@ class Problems(unittest.TestCase):
 		Problems.testBase.Succeeded(3)
 
 	def test_dips_fact_4(self):
-		dips_fact = "DIPS AS is a great place to work. \nWe have open positions \nin Trondheim, Bodø, Oslo and Tromsø \nin Trondheim, Bodø, Oslo and Tromsø"
+		dips_fact = "DIPS AS is a great place to work. \nWe have open positions \nin Trondheim, Bodø, Oslo and Tromsø\nin Trondheim, Bodø, Oslo and Tromsø"
 		line = distinctConcat(dips_fact)
 
 		self.assertEqual("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø", line)
