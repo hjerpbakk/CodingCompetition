@@ -1,11 +1,11 @@
 import re
 
-# This function takes a string containing
-# a single number and should return this
-# number.
+# This method takes a multiline string containing duplicates
+# and should remove the duplicated lines and concatinate
+# the string.
 # 
 # Example:
-# Given: "DIPS blir brukt av over 80000 brukere hver dag."
-# Return: 80000
-def extractNumber(dips_fact):
-    return 0
+# Given: "a\nb\na\nc"
+# Return: abc
+def distinctConcat(dips_fact):
+    return ""
