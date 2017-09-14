@@ -16,46 +16,58 @@ public class Problems {
 
     @Test
     public void DIPS_Fact_1() throws Exception {
-        String dips_fact = "DIPS AS har 6 kontorer: Trondheim, Bodø, Tromsø, Oslo, Bergen og Stockholm.";
-        int number = solution.extractNumber(dips_fact);
+        String dips_fact = "DIPS AS is a great place to work";
+        String distinctConcat  = solution.distinctConcat(dips_fact);
 
-        Assert.assertEquals(6, number);
+        Assert.assertEquals("DIPS AS is a great place to work", distinctConcat );
         Succeeded(1);
     }
 
     @Test
     public void DIPS_Fact_2() throws Exception {
-        String dips_fact = "DIPS AS har hatt bursdag og i år fylte vi 30 :)";
-        int number = solution.extractNumber(dips_fact);
+        String dips_fact = "DIPS AS is a great place to work. \n" +
+                "We have open positions";
 
-        Assert.assertEquals(30, number);
+        String distinctConcat  = solution.distinctConcat(dips_fact);
+
+        Assert.assertEquals("DIPS AS is a great place to work. We have open positions", distinctConcat );
         Succeeded(2);
     }
 
     @Test
     public void DIPS_Fact_3() throws Exception {
-        String dips_fact = "DIPS AS lager pasientdatasystemer for 85 % av det norske markedet.";
-        int number = solution.extractNumber(dips_fact);
+        String dips_fact = "DIPS AS is a great place to work. \n" +
+                "We have open positions \n" +
+                "in Trondheim, Bodø, Oslo and Tromsø";
+        String distinctConcat  = solution.distinctConcat(dips_fact);
 
-        Assert.assertEquals(85, number);
+        Assert.assertEquals("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsøk", distinctConcat );
         Succeeded(3);
     }
 
     @Test
     public void DIPS_Fact_4() throws Exception {
-        String dips_fact = "DIPS blir brukt av over 80000 brukere hver dag.";
-        int number = solution.extractNumber(dips_fact);
+        String dips_fact = "DIPS AS is a great place to work. \n" +
+                "We have open positions \n" +
+                "in Trondheim, Bodø, Oslo and Tromsø\n" +
+                "in Trondheim, Bodø, Oslo and Tromsø";
+        String distinctConcat  = solution.distinctConcat(dips_fact);
 
-        Assert.assertEquals(80000, number);
+        Assert.assertEquals("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø", distinctConcat );
         Succeeded(4);
     }
 
     @Test
     public void DIPS_Fact_5() throws Exception {
-        String dips_fact = "DIPS AS har 280 fantastiske medarbeidere som venter spent på å treffe akkurat deg.";
-        int number = solution.extractNumber(dips_fact);
+        String dips_fact = "DIPS AS is a great place to work. \n" +
+                "DIPS AS is a great place to work. \n" +
+                "We have open positions \n" +
+                "in Trondheim, Bodø, Oslo and Tromsø. \n" +
+                "in Trondheim, Bodø, Oslo and Tromsø. \n" +
+                "Come join us!";
+        String distinctConcat  = solution.distinctConcat(dips_fact);
 
-        Assert.assertEquals(280, number);
+        Assert.assertEquals("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø. Come join us!", distinctConcat );
         Succeeded(5);
     }
 

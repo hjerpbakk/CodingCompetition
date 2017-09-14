@@ -1,16 +1,17 @@
 public class Solution {
     /**
-     * This method takes a string containing a
-     * single number and should return this number.
+     * This method takes a multiline string containing duplicates
+     * and should remove the duplicated lines and concatinate
+     * the string.
      *
      * Example:
-     * Given: "DIPS blir brukt av over 80000 brukere hver dag."
-     * Return: 80000
+     * Given: "a\nb\na\nc"
+     * Return: abc
      *
-     * @param dipsFact A string containg a fact about DIPS and a single number.
-     * @return The number in the string.
+     * @param dipsFact A multiline string with duplicates.
+     * @return The distinct contatinated string.
      */
-    public int extractNumber(String dipsFact) {
-        return 0;
+    public String distinctConcat(String dipsFact) {
+        return "";
     }
 }
