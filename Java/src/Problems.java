@@ -41,7 +41,7 @@ public class Problems {
                 "in Trondheim, Bodø, Oslo and Tromsø";
         String distinctConcat  = solution.distinctConcat(dips_fact);
 
-        Assert.assertEquals("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsøk", distinctConcat );
+        Assert.assertEquals("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø", distinctConcat );
         Succeeded(3);
     }
 
