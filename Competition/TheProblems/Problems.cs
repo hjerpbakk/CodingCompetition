@@ -34,7 +34,7 @@ namespace TheProblems
         public void SecondTest()
         {
             var distinctConcat = yourSolution.DistinctConcat(
-                "DIPS AS is a great place to work. \n" +
+                "DIPS AS is a great place to work.\n" +
                 "We have open positions");
 
             Assert.AreEqual("DIPS AS is a great place to work. We have open positions", distinctConcat);
@@ -45,8 +45,8 @@ namespace TheProblems
         public void ThirdTest()
         {
             var distinctConcat = yourSolution.DistinctConcat(
-                "DIPS AS is a great place to work. \n" +
-                "We have open positions \n" +
+                "DIPS AS is a great place to work.\n" +
+                "We have open positions\n" +
                 "in Trondheim, Bodø, Oslo and Tromsø");
 
             Assert.AreEqual("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø", distinctConcat);
@@ -57,8 +57,8 @@ namespace TheProblems
         public void FourthTest()
         {
             var distinctConcat = yourSolution.DistinctConcat(
-                "DIPS AS is a great place to work. \n" +
-                "We have open positions \n" +
+                "DIPS AS is a great place to work.\n" +
+                "We have open positions\n" +
                 "in Trondheim, Bodø, Oslo and Tromsø\n" +
                 "in Trondheim, Bodø, Oslo and Tromsø");
 
@@ -70,11 +70,11 @@ namespace TheProblems
         public void FifthTest()
         {
             var distinctConcat = yourSolution.DistinctConcat(
-                "DIPS AS is a great place to work. \n" +
-                "DIPS AS is a great place to work. \n" +
-                "We have open positions \n" +
-                "in Trondheim, Bodø, Oslo and Tromsø. \n" +
-                "in Trondheim, Bodø, Oslo and Tromsø. \n" +
+                "DIPS AS is a great place to work.\n" +
+                "DIPS AS is a great place to work.\n" +
+                "We have open positions\n" +
+                "in Trondheim, Bodø, Oslo and Tromsø.\n" +
+                "in Trondheim, Bodø, Oslo and Tromsø.\n" +
                 "Come join us!");
 
             Assert.AreEqual("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø. Come join us!", distinctConcat);
