@@ -25,7 +25,7 @@ public class Problems {
 
     @Test
     public void DIPS_Fact_2() throws Exception {
-        String dips_fact = "DIPS AS is a great place to work. \n" +
+        String dips_fact = "DIPS AS is a great place to work.\n" +
                 "We have open positions";
 
         String distinctConcat  = solution.distinctConcat(dips_fact);
@@ -36,8 +36,8 @@ public class Problems {
 
     @Test
     public void DIPS_Fact_3() throws Exception {
-        String dips_fact = "DIPS AS is a great place to work. \n" +
-                "We have open positions \n" +
+        String dips_fact = "DIPS AS is a great place to work.\n" +
+                "We have open positions\n" +
                 "in Trondheim, Bodø, Oslo and Tromsø";
         String distinctConcat  = solution.distinctConcat(dips_fact);
 
@@ -47,8 +47,8 @@ public class Problems {
 
     @Test
     public void DIPS_Fact_4() throws Exception {
-        String dips_fact = "DIPS AS is a great place to work. \n" +
-                "We have open positions \n" +
+        String dips_fact = "DIPS AS is a great place to work.\n" +
+                "We have open positions\n" +
                 "in Trondheim, Bodø, Oslo and Tromsø\n" +
                 "in Trondheim, Bodø, Oslo and Tromsø";
         String distinctConcat  = solution.distinctConcat(dips_fact);
@@ -59,11 +59,11 @@ public class Problems {
 
     @Test
     public void DIPS_Fact_5() throws Exception {
-        String dips_fact = "DIPS AS is a great place to work. \n" +
-                "DIPS AS is a great place to work. \n" +
-                "We have open positions \n" +
-                "in Trondheim, Bodø, Oslo and Tromsø. \n" +
-                "in Trondheim, Bodø, Oslo and Tromsø. \n" +
+        String dips_fact = "DIPS AS is a great place to work.\n" +
+                "DIPS AS is a great place to work.\n" +
+                "We have open positions\n" +
+                "in Trondheim, Bodø, Oslo and Tromsø.\n" +
+                "in Trondheim, Bodø, Oslo and Tromsø.\n" +
                 "Come join us!";
         String distinctConcat  = solution.distinctConcat(dips_fact);
 
