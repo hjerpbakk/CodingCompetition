@@ -13,8 +13,15 @@ namespace TheSolution
         /// and should remove the duplicated lines and concatinate
         /// the string.
         /// 
-        /// Example:
-        /// Given "a\nb\na\nc", the method should return "abc".
+        /// Example, given:
+        /// a
+        /// b
+        /// a
+        /// c
+        /// 
+        /// return:
+        /// abc
+        /// 
         /// </summary>
         /// <param name="duplicates">A multiline string with duplicates</param>
         /// <returns>The distinct contatinated string</returns>
