@@ -9,18 +9,19 @@ namespace TheSolution
     public class Solution
     {
         /// <summary>
-        /// This method takes a multiline string containing duplicates
+        /// This method takes a multiline string containing duplicated lines
         /// and should remove the duplicated lines and concatinate
         /// the string.
         /// 
         /// Example, given:
-        /// a
-        /// b
-        /// a
-        /// c
+        /// DIPS
+        /// is a great
+        /// place
+        /// DIPS
+        /// to work
         /// 
         /// return:
-        /// abc
+        /// DIPS is a great place to work
         /// 
         /// </summary>
         /// <param name="duplicates">A multiline string with duplicates</param>
