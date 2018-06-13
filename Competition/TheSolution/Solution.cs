@@ -8,9 +8,10 @@ namespace TheSolution
 {
     public class Solution
     {
+        /// 
         /// <summary>
         /// This method takes a multiline string containing duplicated lines
-        /// and should remove the duplicated lines and concatinate
+        /// and should remove the duplicated lines and concatenate
         /// the string.
         /// 
         /// Example, given:
