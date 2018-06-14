@@ -8,28 +8,23 @@ namespace TheSolution
 {
     public class Solution
     {
-        /// 
         /// <summary>
-        /// This method takes a multiline string containing duplicated lines
-        /// and should remove the duplicated lines and concatenate
-        /// the string.
+        /// Your task is to find the median number from an
+        /// unordered list of numbers. There will always be
+        /// an odd number of numbers.
         /// 
-        /// Example, given:
-        /// DIPS
-        /// is a great
-        /// place
-        /// DIPS
-        /// to work
+        /// Example:
+        /// 3, 1, 2, 4, 5
         /// 
-        /// return:
-        /// DIPS is a great place to work
+        /// Return:
+        /// 3
         /// 
         /// </summary>
-        /// <param name="duplicates">A multiline string with duplicates</param>
-        /// <returns>The distinct contatinated string</returns>
-        public string DistinctConcat(string duplicates)
+        /// <param name="numbers">An unordered list of numbers.</param>
+        /// <returns>The median number.</returns>
+        public int Median(string numbers)
         {
-            return "";
+            return 0;
         }
     }
 }
