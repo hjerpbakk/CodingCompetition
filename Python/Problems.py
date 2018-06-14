@@ -1,5 +1,5 @@
 from TestBase import TestBase
-from Solution import distinctConcat
+from Solution import median
 import unittest
 
 # These are the tests
