@@ -1,20 +1,18 @@
 import re
 
-# This method takes a multiline string containing duplicated lines
-# and should remove the duplicated lines and concatinate
-# the string.
+# <summary>
+# Your task is to find the median number from a string
+# of unordered list of numbers. There will always be
+# an odd number of numbers.
 #
-# Example, given:
-# DIPS
-# is a great
-# place
-# DIPS
-# to work
+# Example:
+# 3, 1, 2, 4, 5
 #
-# return:
-# DIPS is a great place to work
+# Return:
+# 3
 #
-# @param dipsFact A multiline string with duplicates.
-# @return The distinct contatinated string.
-def distinctConcat(dips_fact):
-    return ""
+# </summary>
+# <param name="numbers">An unordered list of numbers.</param>
+# <returns>The median number.</returns>
+def median(numbers):
+    return 0

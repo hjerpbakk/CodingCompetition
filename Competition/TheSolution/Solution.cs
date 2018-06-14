@@ -9,8 +9,8 @@ namespace TheSolution
     public class Solution
     {
         /// <summary>
-        /// Your task is to find the median number from an
-        /// unordered list of numbers. There will always be
+        /// Your task is to find the median number from a string
+        /// of unordered list of numbers. There will always be
         /// an odd number of numbers.
         /// 
         /// Example:

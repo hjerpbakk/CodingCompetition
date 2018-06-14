@@ -10,38 +10,38 @@ class Problems(unittest.TestCase):
 		cls.testBase = TestBase()
 
 	def test_dips_fact_1(self):
-		dips_fact = "DIPS AS is a great place to work"
-		line = distinctConcat(dips_fact)
+		numbers = "1, 2, 3, 4, 5"
+		line = median(numbers)
 
-		self.assertEqual("DIPS AS is a great place to work", line)
+		self.assertEqual(3, line)
 		Problems.testBase.Succeeded(1)
 
 	def test_dips_fact_2(self):
-		dips_fact = "DIPS AS is a great place to work.\nWe have open positions"
-		line = distinctConcat(dips_fact)
+		numbers = "45, 90, 1, 1235, 17, 3, 9"
+		line = median(numbers)
 
-		self.assertEqual("DIPS AS is a great place to work. We have open positions", line)
+		self.assertEqual(17, line)
 		Problems.testBase.Succeeded(2)
 
 	def test_dips_fact_3(self):
-		dips_fact = "DIPS AS is a great place to work.\nWe have open positions\nin Trondheim, Bodø, Oslo and Tromsø"
-		line = distinctConcat(dips_fact)
+		numbers = "32, 54, 12, 64, 42"
+		line = median(numbers)
 
-		self.assertEqual("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø", line)
+		self.assertEqual(42, line)
 		Problems.testBase.Succeeded(3)
 
 	def test_dips_fact_4(self):
-		dips_fact = "DIPS AS is a great place to work.\nWe have open positions\nin Trondheim, Bodø, Oslo and Tromsø\nin Trondheim, Bodø, Oslo and Tromsø"
-		line = distinctConcat(dips_fact)
+		numbers = "5, 4, 3, 2, 1"
+		line = median(numbers)
 
-		self.assertEqual("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø", line)
+		self.assertEqual(3, line)
 		Problems.testBase.Succeeded(4)
 
 	def test_dips_fact_5(self):
-		dips_fact = "DIPS AS is a great place to work.\nDIPS AS is a great place to work.\nWe have open positions\nin Trondheim, Bodø, Oslo and Tromsø.\nin Trondheim, Bodø, Oslo and Tromsø.\nCome join us!";
-		line = distinctConcat(dips_fact)
+		numbers = "90, 72, 17, 15, 19"
+		line = median(numbers)
 
-		self.assertEqual("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø. Come join us!", line)
+		self.assertEqual(19, line)
 		Problems.testBase.Succeeded(5)
 
 	@classmethod
