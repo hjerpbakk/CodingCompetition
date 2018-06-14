@@ -1,23 +1,19 @@
 public class Solution {
-    /**
-     * This method takes a multiline string containing duplicated lines
-     * and should remove the duplicated lines and concatinate
-     * the string.
-     *
-     * Example, given:
-     * DIPS
-     * is a great
-     * place
-     * DIPS
-     * to work
-     *
-     * return:
-     * DIPS is a great place to work
-     *
-     * @param dipsFact A multiline string with duplicates.
-     * @return The distinct contatinated string.
-     */
-    public String distinctConcat(String dipsFact) {
-        return "";
+    /// <summary>
+    /// Your task is to find the median number from an
+    /// unordered list of numbers. There will always be
+    /// an odd number of numbers.
+    ///
+    /// Example:
+    /// 3, 1, 2, 4, 5
+    ///
+    /// Return:
+    /// 3
+    ///
+    /// </summary>
+    /// <param name="numbers">An unordered list of numbers.</param>
+    /// <returns>The median number.</returns>
+    public int median(String numbers) {
+        return 0;
     }
 }
