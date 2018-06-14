@@ -26,7 +26,7 @@ namespace TheProblems
         {
             var distinctConcat = yourSolution.Median("1, 2, 3, 4, 5");
 
-            Assert.AreEqual(5, distinctConcat);
+            Assert.AreEqual(3, distinctConcat);
             Succeeded(1);
         }
 
