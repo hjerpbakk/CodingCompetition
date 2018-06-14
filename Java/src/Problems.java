@@ -16,58 +16,41 @@ public class Problems {
 
     @Test
     public void DIPS_Fact_1() throws Exception {
-        String dips_fact = "DIPS AS is a great place to work";
-        String distinctConcat  = solution.distinctConcat(dips_fact);
+        int median  = solution.median("1, 2, 3, 4, 5");
 
-        Assert.assertEquals("DIPS AS is a great place to work", distinctConcat );
+        Assert.assertEquals(3, median);
         Succeeded(1);
     }
 
     @Test
     public void DIPS_Fact_2() throws Exception {
-        String dips_fact = "DIPS AS is a great place to work.\n" +
-                "We have open positions";
+        int median  = solution.median("45, 90, 1, 1235, 17, 3, 9");
 
-        String distinctConcat  = solution.distinctConcat(dips_fact);
-
-        Assert.assertEquals("DIPS AS is a great place to work. We have open positions", distinctConcat );
+        Assert.assertEquals(17, median);
         Succeeded(2);
     }
 
     @Test
     public void DIPS_Fact_3() throws Exception {
-        String dips_fact = "DIPS AS is a great place to work.\n" +
-                "We have open positions\n" +
-                "in Trondheim, Bodø, Oslo and Tromsø";
-        String distinctConcat  = solution.distinctConcat(dips_fact);
+        int median  = solution.median("32, 54, 12, 64, 42");
 
-        Assert.assertEquals("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø", distinctConcat );
+        Assert.assertEquals(42, median);
         Succeeded(3);
     }
 
     @Test
     public void DIPS_Fact_4() throws Exception {
-        String dips_fact = "DIPS AS is a great place to work.\n" +
-                "We have open positions\n" +
-                "in Trondheim, Bodø, Oslo and Tromsø\n" +
-                "in Trondheim, Bodø, Oslo and Tromsø";
-        String distinctConcat  = solution.distinctConcat(dips_fact);
+        int median  = solution.median("5, 4, 3, 2, 1");
 
-        Assert.assertEquals("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø", distinctConcat );
+        Assert.assertEquals(3, median);
         Succeeded(4);
     }
 
     @Test
     public void DIPS_Fact_5() throws Exception {
-        String dips_fact = "DIPS AS is a great place to work.\n" +
-                "DIPS AS is a great place to work.\n" +
-                "We have open positions\n" +
-                "in Trondheim, Bodø, Oslo and Tromsø.\n" +
-                "in Trondheim, Bodø, Oslo and Tromsø.\n" +
-                "Come join us!";
-        String distinctConcat  = solution.distinctConcat(dips_fact);
+        int median  = solution.median("90, 72, 17, 15, 19");
 
-        Assert.assertEquals("DIPS AS is a great place to work. We have open positions in Trondheim, Bodø, Oslo and Tromsø. Come join us!", distinctConcat );
+        Assert.assertEquals(19, median);
         Succeeded(5);
     }
 

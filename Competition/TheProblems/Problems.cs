@@ -24,45 +24,45 @@ namespace TheProblems
         [TestMethod]
         public void FirstTest()
         {
-            var distinctConcat = yourSolution.Median("1, 2, 3, 4, 5");
+            var median = yourSolution.Median("1, 2, 3, 4, 5");
 
-            Assert.AreEqual(3, distinctConcat);
+            Assert.AreEqual(3, median);
             Succeeded(1);
         }
 
         [TestMethod]
         public void SecondTest()
         {
-            var distinctConcat = yourSolution.Median("45, 90, 1, 1235, 17, 3, 9");
+            var median = yourSolution.Median("45, 90, 1, 1235, 17, 3, 9");
 
-            Assert.AreEqual(17, distinctConcat);
+            Assert.AreEqual(17, median);
             Succeeded(2);
         }
 
         [TestMethod]
         public void ThirdTest()
         {
-            var distinctConcat = yourSolution.Median("32, 54, 12, 64, 42");
+            var median = yourSolution.Median("32, 54, 12, 64, 42");
 
-            Assert.AreEqual(42, distinctConcat);
+            Assert.AreEqual(42, median);
             Succeeded(3);
         }
 
         [TestMethod]
         public void FourthTest()
         {
-            var distinctConcat = yourSolution.Median("5, 4, 3, 2, 1");
+            var median = yourSolution.Median("5, 4, 3, 2, 1");
 
-            Assert.AreEqual(3, distinctConcat);
+            Assert.AreEqual(3, median);
             Succeeded(4);
         }
 
         [TestMethod]
         public void FifthTest()
         {
-            var distinctConcat = yourSolution.Median("90, 72, 17, 15, 19");
+            var median = yourSolution.Median("90, 72, 17, 15, 19");
 
-            Assert.AreEqual(19, distinctConcat);
+            Assert.AreEqual(19, median);
             Succeeded(5);
         }
 
