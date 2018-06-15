@@ -11,7 +11,7 @@ namespace TheSolution
         /// <summary>
         /// Your task is to find the number closest to 0 from
         /// commaseparated string of numbers. If there are
-        /// two numbers equally close, chose the negative one.
+        /// two numbers equally close, choose the negative one.
         /// 
         /// Example:
         /// 3,-1,2,1,4,5
