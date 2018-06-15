@@ -16,41 +16,41 @@ public class Problems {
 
     @Test
     public void DIPS_Fact_1() throws Exception {
-        int median  = solution.median("1, 2, 3, 4, 5");
+        int median  = solution.closestToZero("0,1,-1,3");
 
-        Assert.assertEquals(3, median);
+        Assert.assertEquals(0, median);
         Succeeded(1);
     }
 
     @Test
     public void DIPS_Fact_2() throws Exception {
-        int median  = solution.median("45, 90, 1, 1235, 17, 3, 9");
+        int median  = solution.closestToZero("45,90,1,1235,17,3,9");
 
-        Assert.assertEquals(17, median);
+        Assert.assertEquals(1, median);
         Succeeded(2);
     }
 
     @Test
     public void DIPS_Fact_3() throws Exception {
-        int median  = solution.median("32, 54, 12, 64, 42");
+        int median  = solution.closestToZero("32,54,12,2,-2,64,42");
 
-        Assert.assertEquals(42, median);
+        Assert.assertEquals(-2, median);
         Succeeded(3);
     }
 
     @Test
     public void DIPS_Fact_4() throws Exception {
-        int median  = solution.median("5, 4, 3, 2, 1");
+        int median  = solution.closestToZero("-5,-4,-3,-2,-1");
 
-        Assert.assertEquals(3, median);
+        Assert.assertEquals(-1, median);
         Succeeded(4);
     }
 
     @Test
     public void DIPS_Fact_5() throws Exception {
-        int median  = solution.median("90, 72, 17, 15, 19");
+        int median  = solution.closestToZero("90,72,17,15,19");
 
-        Assert.assertEquals(19, median);
+        Assert.assertEquals(15, median);
         Succeeded(5);
     }
 

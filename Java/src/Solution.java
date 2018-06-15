@@ -1,19 +1,19 @@
 public class Solution {
     /// <summary>
-    /// Your task is to find the median number from a string
-    /// of unordered list of numbers. There will always be
-    /// an odd number of numbers.
-    ///
+    /// Your task is to find the number closest to 0 from
+    /// commaseparated string of numbers. If there are
+    /// two numbers equally close, chose the negative one.
+    /// 
     /// Example:
-    /// 3, 1, 2, 4, 5
-    ///
+    /// 3,-1,2,1,4,5
+    /// 
     /// Return:
-    /// 3
-    ///
+    /// -1
+    /// 
     /// </summary>
-    /// <param name="numbers">An unordered list of numbers.</param>
-    /// <returns>The median number.</returns>
-    public int median(String numbers) {
+    /// <param name="numbers">An unordered, commaseparated string of numbers.</param>
+    /// <returns>The number closest to zero.</returns>
+    public int closestToZero(String numbers) {
         return 0;
     }
 }
