@@ -14,7 +14,7 @@ namespace TheSolution
         /// two numbers equally close, chose the negative one.
         /// 
         /// Example:
-        /// 3, -1, 2, 1, 4, 5
+        /// 3,-1,2,1,4,5
         /// 
         /// Return:
         /// -1

@@ -24,7 +24,7 @@ namespace TheProblems
         [TestMethod]
         public void FirstTest()
         {
-            var median = yourSolution.ClosestToZero("0, 1, -1, 3");
+            var median = yourSolution.ClosestToZero("0,1,-1,3");
 
             Assert.AreEqual(0, median);
             Succeeded(1);
@@ -33,7 +33,7 @@ namespace TheProblems
         [TestMethod]
         public void SecondTest()
         {
-            var median = yourSolution.ClosestToZero("45, 90, 1, 1235, 17, 3, 9");
+            var median = yourSolution.ClosestToZero("45,90,1,1235,17,3,9");
 
             Assert.AreEqual(1, median);
             Succeeded(2);
@@ -42,7 +42,7 @@ namespace TheProblems
         [TestMethod]
         public void ThirdTest()
         {
-            var median = yourSolution.ClosestToZero("32, 54, 12, 2, -2, 64, 42");
+            var median = yourSolution.ClosestToZero("32,54,12,2,-2,64,42");
 
             Assert.AreEqual(-2, median);
             Succeeded(3);
@@ -51,16 +51,16 @@ namespace TheProblems
         [TestMethod]
         public void FourthTest()
         {
-            var median = yourSolution.ClosestToZero("5, 4, 3, 2, 1");
+            var median = yourSolution.ClosestToZero("-5,-4,-3,-2,-1");
 
-            Assert.AreEqual(1, median);
+            Assert.AreEqual(-1, median);
             Succeeded(4);
         }
 
         [TestMethod]
         public void FifthTest()
         {
-            var median = yourSolution.ClosestToZero("90, 72, 17, 15, 19");
+            var median = yourSolution.ClosestToZero("90,72,17,15,19");
 
             Assert.AreEqual(15, median);
             Succeeded(5);
