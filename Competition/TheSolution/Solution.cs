@@ -9,20 +9,24 @@ namespace TheSolution
     public class Solution
     {
         /// <summary>
-        /// Your task is to find the number closest to 0 from
-        /// commaseparated string of numbers. If there are
-        /// two numbers equally close, choose the negative one.
+        /// Your task is to calculate the Hamming difference between 
+        /// two DNA strands. It is found by comparing two DNA strands 
+        /// and counting how many of the nucleotides are different 
+        /// from their equivalent in the other string.
         /// 
         /// Example:
-        /// 3,-1,2,1,4,5
+        /// GAGCCTACTAACGGGAT
+        /// CATCGTAATGACGGCCT
+        /// ^ ^ ^  ^ ^    ^^
         /// 
         /// Return:
-        /// -1
+        /// 7
         /// 
         /// </summary>
-        /// <param name="numbers">An unordered, commaseparated string of numbers.</param>
-        /// <returns>The number closest to zero.</returns>
-        public int ClosestToZero(string numbers)
+        /// <param name="firstStrand">The first DNA strand.</param>
+        /// <param name="secondStrand">The second DNA strand.</param>
+        /// <returns>The Hamming distance between two DNA strands.</returns>
+        public int Distance(string firstStrand, string secondStrand)
         {
             return 0;
         }

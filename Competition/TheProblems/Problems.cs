@@ -24,45 +24,35 @@ namespace TheProblems
         [TestMethod]
         public void FirstTest()
         {
-            var median = yourSolution.ClosestToZero("0,1,-1,3");
-
-            Assert.AreEqual(0, median);
+            Assert.AreEqual(0, yourSolution.Distance("GGACTGA", "GGACTGA"));
             Succeeded(1);
         }
 
         [TestMethod]
         public void SecondTest()
         {
-            var median = yourSolution.ClosestToZero("45,90,1,1235,17,3,9");
-
-            Assert.AreEqual(1, median);
+            Assert.AreEqual(1, yourSolution.Distance("A", "G"));
             Succeeded(2);
         }
 
         [TestMethod]
         public void ThirdTest()
         {
-            var median = yourSolution.ClosestToZero("32,54,12,2,-2,64,42");
-
-            Assert.AreEqual(-2, median);
+            Assert.AreEqual(2, yourSolution.Distance("AG", "CT"));
             Succeeded(3);
         }
 
         [TestMethod]
         public void FourthTest()
         {
-            var median = yourSolution.ClosestToZero("-5,-4,-3,-2,-1");
-
-            Assert.AreEqual(-1, median);
+            Assert.AreEqual(2, yourSolution.Distance("ACCAGGG", "ACTATGG"));
             Succeeded(4);
         }
 
         [TestMethod]
         public void FifthTest()
         {
-            var median = yourSolution.ClosestToZero("90,72,17,15,19");
-
-            Assert.AreEqual(15, median);
+            Assert.AreEqual(9, yourSolution.Distance("GGACGGATTCTG", "AGGACGGATTCT"));
             Succeeded(5);
         }
 
