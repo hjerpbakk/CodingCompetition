@@ -1,23 +1,24 @@
 public class Solution {
     /// <summary>
-    /// Your task is to calculate the Hamming difference between
-    /// two DNA strands. It is found by comparing two DNA strands
-    /// and counting how many of the nucleotides are different
-    /// from their equivalent in the other string.
+    /// Given a year, find out if it is a leap year.
+    /// A leap year occurs:
+    ///
+    /// on every year that is evenly divisible by 4
+    ///     except every year that is evenly divisible by 100
+    ///         unless the year is also evenly divisible by 400
+    ///
+    /// For example, 1997 is not a leap year, but 1996 is. 1900 is not a leap year, but 2000 is.
     ///
     /// Example:
-    /// GAGCCTACTAACGGGAT
-    /// CATCGTAATGACGGCCT
-    /// ^ ^ ^  ^ ^    ^^
+    /// 2000
     ///
     /// Return:
-    /// 7
+    /// true
     ///
     /// </summary>
-    /// <param name="firstStrand">The first DNA strand.</param>
-    /// <param name="secondStrand">The second DNA strand.</param>
-    /// <returns>The Hamming distance between two DNA strands.</returns>
-    public int distance(String firstStrand, String secondStrand) {
-        return 0;
+    /// <param name="year">The year to check.</param>
+    /// <returns>Whether the year is a leap year.</returns>
+    public Boolean isLeapYear(int year) {
+        return false;
     }
 }

@@ -16,31 +16,31 @@ public class Problems {
 
     @Test
     public void DIPS_Fact_1() throws Exception {
-        Assert.assertEquals(0, yourSolution.distance("GGACTGA", "GGACTGA"));
+        Assert.assertEquals(false, yourSolution.isLeapYear(2015));
         Succeeded(1);
     }
 
     @Test
     public void DIPS_Fact_2() throws Exception {
-        Assert.assertEquals(1, yourSolution.distance("A", "G"));
+        Assert.assertEquals(true, yourSolution.isLeapYear(1996));
         Succeeded(2);
     }
 
     @Test
     public void DIPS_Fact_3() throws Exception {
-        Assert.assertEquals(2, yourSolution.distance("AG", "CT"));
+        Assert.assertEquals(false, yourSolution.isLeapYear(2100));
         Succeeded(3);
     }
 
     @Test
     public void DIPS_Fact_4() throws Exception {
-        Assert.assertEquals(2, yourSolution.distance("ACCAGGG", "ACTATGG"));
+        Assert.assertEquals(true, yourSolution.isLeapYear(2000));
         Succeeded(4);
     }
 
     @Test
     public void DIPS_Fact_5() throws Exception {
-        Assert.assertEquals(9, yourSolution.distance("GGACGGATTCTG", "AGGACGGATTCT"));
+        Assert.assertEquals(false, yourSolution.isLeapYear(1997));
         Succeeded(5);
     }
 
