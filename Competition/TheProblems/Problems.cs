@@ -24,35 +24,35 @@ namespace TheProblems
         [TestMethod]
         public void FirstTest()
         {
-            Assert.AreEqual(0, yourSolution.Distance("GGACTGA", "GGACTGA"));
+            Assert.AreEqual(false, yourSolution.IsLeapYear(2015));
             Succeeded(1);
         }
 
         [TestMethod]
         public void SecondTest()
         {
-            Assert.AreEqual(1, yourSolution.Distance("A", "G"));
+            Assert.AreEqual(true, yourSolution.IsLeapYear(1996));
             Succeeded(2);
         }
 
         [TestMethod]
         public void ThirdTest()
         {
-            Assert.AreEqual(2, yourSolution.Distance("AG", "CT"));
+            Assert.AreEqual(false, yourSolution.IsLeapYear(2100));
             Succeeded(3);
         }
 
         [TestMethod]
         public void FourthTest()
         {
-            Assert.AreEqual(2, yourSolution.Distance("ACCAGGG", "ACTATGG"));
+            Assert.AreEqual(true, yourSolution.IsLeapYear(2000));
             Succeeded(4);
         }
 
         [TestMethod]
         public void FifthTest()
         {
-            Assert.AreEqual(9, yourSolution.Distance("GGACGGATTCTG", "AGGACGGATTCT"));
+            Assert.AreEqual(false, yourSolution.IsLeapYear(1997));
             Succeeded(5);
         }
 
