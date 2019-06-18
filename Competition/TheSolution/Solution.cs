@@ -22,7 +22,7 @@ namespace TheSolution
         /// <returns>How many years this person has been alive.</returns>
         public int YearsAlive(DateTime birthDate)
         {
-            return 0;
+            return -1;
         }
     }
 }

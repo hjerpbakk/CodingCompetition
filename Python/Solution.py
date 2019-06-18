@@ -14,4 +14,4 @@ from datetime import date
 # <param name="birthDate">The birthdate to check.</param>
 # <returns>How many years this person has been alive.</returns>
 def yearsAlive(birthdate):
-    return 0
+    return -1

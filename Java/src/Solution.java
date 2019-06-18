@@ -14,6 +14,6 @@ public class Solution {
     /// <param name="birthDate">The birthdate to check.</param>
     /// <returns>How many years this person has been alive.</returns>
     public int yearsAlive(LocalDateTime birthDate) {
-        return 0;
+        return -1;
     }
 }
