@@ -1,23 +1,17 @@
 import re
+from datetime import date
 
 # <summary>
-# Given a year, find out if it is a leap year. 
-# A leap year occurs:
-# 
-# on every year that is evenly divisible by 4
-#     except every year that is evenly divisible by 100
-#         unless the year is also evenly divisible by 400
-# 
-# For example, 1997 is not a leap year, but 1996 is. 1900 is not a leap year, but 2000 is.
-# 
+# Given a birthdate, find out how old is this person?
+#
 # Example:
-# 2000
-# 
+# 1.1.2018
+#
 # Return:
-# true
-# 
+# 1
+#
 # </summary>
-# <param name="year">The year to check.</param>
-# <returns>Whether the year is a leap year.</returns>
-def isLeapYear(year):
-    return False
+# <param name="birthDate">The birthdate to check.</param>
+# <returns>How many years this person has been alive.</returns>
+def yearsAlive(birthdate):
+    return 0

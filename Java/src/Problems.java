@@ -3,6 +3,8 @@ import org.junit.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class Problems {
     //region
@@ -16,31 +18,31 @@ public class Problems {
 
     @Test
     public void DIPS_Fact_1() throws Exception {
-        Assert.assertEquals(false, yourSolution.isLeapYear(2015));
+        Assert.assertEquals(0, yourSolution.yearsAlive(LocalDateTime.now()));
         Succeeded(1);
     }
 
     @Test
     public void DIPS_Fact_2() throws Exception {
-        Assert.assertEquals(true, yourSolution.isLeapYear(1996));
+        Assert.assertEquals(1, yourSolution.yearsAlive(LocalDateTime.now().minusHours(24*366)));
         Succeeded(2);
     }
 
     @Test
     public void DIPS_Fact_3() throws Exception {
-        Assert.assertEquals(false, yourSolution.isLeapYear(2100));
+        Assert.assertEquals(10, yourSolution.yearsAlive(LocalDateTime.now().minusHours(24*366*10)));
         Succeeded(3);
     }
 
     @Test
     public void DIPS_Fact_4() throws Exception {
-        Assert.assertEquals(true, yourSolution.isLeapYear(2000));
+        Assert.assertEquals(50, yourSolution.yearsAlive(LocalDateTime.now().minusHours(24*366*50)));
         Succeeded(4);
     }
 
     @Test
     public void DIPS_Fact_5() throws Exception {
-        Assert.assertEquals(false, yourSolution.isLeapYear(1997));
+        Assert.assertEquals(100, yourSolution.yearsAlive(LocalDateTime.now().minusHours(24*366*100)));
         Succeeded(5);
     }
 

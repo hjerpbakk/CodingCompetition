@@ -2,6 +2,7 @@
 using Runner;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TheSolution;
+using System;
 
 namespace TheProblems
 {
@@ -24,35 +25,35 @@ namespace TheProblems
         [TestMethod]
         public void FirstTest()
         {
-            Assert.AreEqual(false, yourSolution.IsLeapYear(2015));
+            Assert.AreEqual(0, yourSolution.YearsAlive(DateTime.Now));
             Succeeded(1);
         }
 
         [TestMethod]
         public void SecondTest()
         {
-            Assert.AreEqual(true, yourSolution.IsLeapYear(1996));
+            Assert.AreEqual(1, yourSolution.YearsAlive(DateTime.Now - TimeSpan.FromDays(365)));
             Succeeded(2);
         }
 
         [TestMethod]
         public void ThirdTest()
         {
-            Assert.AreEqual(false, yourSolution.IsLeapYear(2100));
+            Assert.AreEqual(10, yourSolution.YearsAlive(DateTime.Now - TimeSpan.FromDays(366*10)));
             Succeeded(3);
         }
 
         [TestMethod]
         public void FourthTest()
         {
-            Assert.AreEqual(true, yourSolution.IsLeapYear(2000));
+            Assert.AreEqual(50, yourSolution.YearsAlive(DateTime.Now - TimeSpan.FromDays(366 * 50)));
             Succeeded(4);
         }
 
         [TestMethod]
         public void FifthTest()
         {
-            Assert.AreEqual(false, yourSolution.IsLeapYear(1997));
+            Assert.AreEqual(100, yourSolution.YearsAlive(DateTime.Now - TimeSpan.FromDays(366 * 100)));
             Succeeded(5);
         }
 
