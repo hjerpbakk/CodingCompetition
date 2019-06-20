@@ -2,18 +2,19 @@ import java.time.LocalDateTime;
 
 public class Solution {
     /// <summary>
-    /// Given a birthdate, find out how old is this person?
+    /// A palindrome is a word that reads the same backward as forward.
+    /// You'll write a method which checks wheter a word is palindrome.
     ///
     /// Example:
-    /// 1.1.2018
+    /// anna
     ///
     /// Return:
-    /// 1
+    /// True
     ///
     /// </summary>
-    /// <param name="birthDate">The birthdate to check.</param>
-    /// <returns>How many years this person has been alive.</returns>
-    public int yearsAlive(LocalDateTime birthDate) {
-        return -1;
+    /// <param name="word">The word to check.</param>
+    /// <returns>Whether this word is a palindrome.</returns>
+    public Bool isPalindrome(String word) {
+        return false;
     }
 }

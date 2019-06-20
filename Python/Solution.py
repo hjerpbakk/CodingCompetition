@@ -2,16 +2,17 @@ import re
 from datetime import date
 
 # <summary>
-# Given a birthdate, find out how old is this person?
+# A palindrome is a word that reads the same backward as forward.
+# You'll write a method which checks wheter a word is palindrome.
 #
 # Example:
-# 1.1.2018
+# anna
 #
 # Return:
-# 1
+# True
 #
 # </summary>
-# <param name="birthDate">The birthdate to check.</param>
-# <returns>How many years this person has been alive.</returns>
-def yearsAlive(birthdate):
-    return -1
+# <param name="word">The word to check.</param>
+# <returns>Whether this word is a palindrome.</returns>
+def isPalindrome(word):
+    return False

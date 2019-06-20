@@ -1,5 +1,4 @@
 import org.junit.*;
-
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -18,31 +17,31 @@ public class Problems {
 
     @Test
     public void DIPS_Fact_1() throws Exception {
-        Assert.assertEquals(0, yourSolution.yearsAlive(LocalDateTime.now()));
+        Assert.assertEquals(true, yourSolution.isPalindrome("A"));
         Succeeded(1);
     }
 
     @Test
     public void DIPS_Fact_2() throws Exception {
-        Assert.assertEquals(1, yourSolution.yearsAlive(LocalDateTime.now().minusHours(24*366)));
+        Assert.assertEquals(false, yourSolution.isPalindrome("DIPS"));
         Succeeded(2);
     }
 
     @Test
     public void DIPS_Fact_3() throws Exception {
-        Assert.assertEquals(10, yourSolution.yearsAlive(LocalDateTime.now().minusHours(24*366*10)));
+        Assert.assertEquals(true, yourSolution.isPalindrome("1331"));
         Succeeded(3);
     }
 
     @Test
     public void DIPS_Fact_4() throws Exception {
-        Assert.assertEquals(50, yourSolution.yearsAlive(LocalDateTime.now().minusHours(24*366*50)));
+        Assert.assertEquals(false, yourSolution.isPalindrome("NDC"));
         Succeeded(4);
     }
 
     @Test
     public void DIPS_Fact_5() throws Exception {
-        Assert.assertEquals(100, yourSolution.yearsAlive(LocalDateTime.now().minusHours(24*366*100)));
+        Assert.assertEquals(true, yourSolution.isPalindrome("racecar"));
         Succeeded(5);
     }
 

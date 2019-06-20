@@ -25,35 +25,35 @@ namespace TheProblems
         [TestMethod]
         public void FirstTest()
         {
-            Assert.AreEqual(0, yourSolution.YearsAlive(DateTime.Now));
+            Assert.AreEqual(true, yourSolution.IsPalindrome("A"));
             Succeeded(1);
         }
 
         [TestMethod]
         public void SecondTest()
         {
-            Assert.AreEqual(1, yourSolution.YearsAlive(DateTime.Now - TimeSpan.FromDays(365)));
+            Assert.AreEqual(false, yourSolution.IsPalindrome("DIPS"));
             Succeeded(2);
         }
 
         [TestMethod]
         public void ThirdTest()
         {
-            Assert.AreEqual(10, yourSolution.YearsAlive(DateTime.Now - TimeSpan.FromDays(366*10)));
+            Assert.AreEqual(true, yourSolution.IsPalindrome("1331"));
             Succeeded(3);
         }
 
         [TestMethod]
         public void FourthTest()
         {
-            Assert.AreEqual(50, yourSolution.YearsAlive(DateTime.Now - TimeSpan.FromDays(366 * 50)));
+            Assert.AreEqual(false, yourSolution.IsPalindrome("NDC"));
             Succeeded(4);
         }
 
         [TestMethod]
         public void FifthTest()
         {
-            Assert.AreEqual(100, yourSolution.YearsAlive(DateTime.Now - TimeSpan.FromDays(366 * 100)));
+            Assert.AreEqual(true, yourSolution.IsPalindrome("racecar"));
             Succeeded(5);
         }
 
