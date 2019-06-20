@@ -14,7 +14,7 @@ public class Solution {
     /// </summary>
     /// <param name="word">The word to check.</param>
     /// <returns>Whether this word is a palindrome.</returns>
-    public Bool isPalindrome(String word) {
+    public Boolean isPalindrome(String word) {
         return false;
     }
 }
