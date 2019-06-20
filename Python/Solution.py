@@ -3,7 +3,7 @@ from datetime import date
 
 # <summary>
 # A palindrome is a word that reads the same backward as forward.
-# You'll write a method which checks wheter a word is palindrome.
+# You'll write a method which checks whether a word is palindrome.
 #
 # Example:
 # anna
