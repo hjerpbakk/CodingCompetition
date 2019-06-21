@@ -11,23 +11,23 @@ class Problems(unittest.TestCase):
 		cls.testBase = TestBase()
 
 	def test_dips_fact_1(self):
-		self.assertEqual(7, CountLowerCasetLetters("FirstTest"))
+		self.assertEqual(7, CountLowerCaseLetters("FirstTest"))
 		Problems.testBase.Succeeded(1)
 
 	def test_dips_fact_2(self):
-		self.assertEqual(0, CountLowerCasetLetters("DIPS"))
+		self.assertEqual(0, CountLowerCaseLetters("DIPS"))
 		Problems.testBase.Succeeded(2)
 
 	def test_dips_fact_3(self):
-		self.assertEqual(2, CountLowerCasetLetters("1337 og 1984"))
+		self.assertEqual(2, CountLowerCaseLetters("1337 og 1984"))
 		Problems.testBase.Succeeded(3)
 
 	def test_dips_fact_4(self):
-		self.assertEqual(12, CountLowerCasetLetters("Chicken dinner"))
+		self.assertEqual(12, CountLowerCaseLetters("Chicken dinner"))
 		Problems.testBase.Succeeded(4)
 
 	def test_dips_fact_5(self):
-		self.assertEqual(3, CountLowerCasetLetters("!#¤%&/()=abc{[]"))
+		self.assertEqual(3, CountLowerCaseLetters("!#¤%&/()=abc{[]"))
 		Problems.testBase.Succeeded(5)
 
 	@classmethod

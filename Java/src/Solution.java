@@ -14,7 +14,7 @@ public class Solution {
     /// </summary>
     /// <param name="word">The word to check.</param>
     /// <returns>The number of lower case letters in the word.</returns>
-    public int CountLowerCasetLetters(String word) {
+    public int CountLowerCaseLetters(String word) {
         return -1;
     }
 }

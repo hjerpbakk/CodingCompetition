@@ -14,5 +14,5 @@ from datetime import date
 # </summary>
 # <param name="word">The word to check.</param>
 # <returns>The number of lower case letters in the word.</returns>
-def CountLowerCasetLetters(word):
+def CountLowerCaseLetters(word):
     return -1
