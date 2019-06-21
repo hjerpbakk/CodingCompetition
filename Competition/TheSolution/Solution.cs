@@ -21,14 +21,9 @@ namespace TheSolution
         /// </summary>
         /// <param name="word">The word to check.</param>
         /// <returns>The number of lower case letters in the word.</returns>
-        public int CountLowerCasetLetters(string word)
+        public int CountLowerCaseLetters(string word)
         {
-            var sum = 0;
-            foreach (var letter in word)
-            {
-                if (char.IsLower(letter)) ++sum;
-            }
-            return sum;
+            return -1;
         }
     }
 }

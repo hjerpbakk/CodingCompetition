@@ -25,35 +25,35 @@ namespace TheProblems
         [TestMethod]
         public void FirstTest()
         {
-            Assert.AreEqual(7, yourSolution.CountLowerCasetLetters("FirstTest"));
+            Assert.AreEqual(7, yourSolution.CountLowerCaseLetters("FirstTest"));
             Succeeded(1);
         }
 
         [TestMethod]
         public void SecondTest()
         {
-            Assert.AreEqual(0, yourSolution.CountLowerCasetLetters("DIPS"));
+            Assert.AreEqual(0, yourSolution.CountLowerCaseLetters("DIPS"));
             Succeeded(2);
         }
 
         [TestMethod]
         public void ThirdTest()
         {
-            Assert.AreEqual(2, yourSolution.CountLowerCasetLetters("1337 og 1984"));
+            Assert.AreEqual(2, yourSolution.CountLowerCaseLetters("1337 og 1984"));
             Succeeded(3);
         }
 
         [TestMethod]
         public void FourthTest()
         {
-            Assert.AreEqual(12, yourSolution.CountLowerCasetLetters("Chicken dinner"));
+            Assert.AreEqual(12, yourSolution.CountLowerCaseLetters("Chicken dinner"));
             Succeeded(4);
         }
 
         [TestMethod]
         public void FifthTest()
         {
-            Assert.AreEqual(3, yourSolution.CountLowerCasetLetters("!#¤%&/()=abc{[]"));
+            Assert.AreEqual(3, yourSolution.CountLowerCaseLetters("!#¤%&/()=abc{[]"));
             Succeeded(5);
         }
 
