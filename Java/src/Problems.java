@@ -17,31 +17,31 @@ public class Problems {
 
     @Test
     public void DIPS_Fact_1() throws Exception {
-        Assert.assertEquals(true, yourSolution.isPalindrome("A"));
+        Assert.assertEquals(7, yourSolution.CountLowerCasetLetters("FirstTest"));
         Succeeded(1);
     }
 
     @Test
     public void DIPS_Fact_2() throws Exception {
-        Assert.assertEquals(false, yourSolution.isPalindrome("DIPS"));
+        Assert.assertEquals(0, yourSolution.CountLowerCasetLetters("DIPS"));
         Succeeded(2);
     }
 
     @Test
     public void DIPS_Fact_3() throws Exception {
-        Assert.assertEquals(true, yourSolution.isPalindrome("1331"));
+        Assert.assertEquals(2, yourSolution.CountLowerCasetLetters("1337 og 1984"));
         Succeeded(3);
     }
 
     @Test
     public void DIPS_Fact_4() throws Exception {
-        Assert.assertEquals(false, yourSolution.isPalindrome("NDC"));
+        Assert.assertEquals(12, yourSolution.CountLowerCasetLetters("Chicken dinner"));
         Succeeded(4);
     }
 
     @Test
     public void DIPS_Fact_5() throws Exception {
-        Assert.assertEquals(true, yourSolution.isPalindrome("racecar"));
+        Assert.assertEquals(3, yourSolution.CountLowerCasetLetters("!#¤%&/()=abc{[]"));
         Succeeded(5);
     }
 

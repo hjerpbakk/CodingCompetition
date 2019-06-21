@@ -25,35 +25,35 @@ namespace TheProblems
         [TestMethod]
         public void FirstTest()
         {
-            Assert.AreEqual(true, yourSolution.IsPalindrome("A"));
+            Assert.AreEqual(7, yourSolution.CountLowerCasetLetters("FirstTest"));
             Succeeded(1);
         }
 
         [TestMethod]
         public void SecondTest()
         {
-            Assert.AreEqual(false, yourSolution.IsPalindrome("DIPS"));
+            Assert.AreEqual(0, yourSolution.CountLowerCasetLetters("DIPS"));
             Succeeded(2);
         }
 
         [TestMethod]
         public void ThirdTest()
         {
-            Assert.AreEqual(true, yourSolution.IsPalindrome("1331"));
+            Assert.AreEqual(2, yourSolution.CountLowerCasetLetters("1337 og 1984"));
             Succeeded(3);
         }
 
         [TestMethod]
         public void FourthTest()
         {
-            Assert.AreEqual(false, yourSolution.IsPalindrome("NDC"));
+            Assert.AreEqual(12, yourSolution.CountLowerCasetLetters("Chicken dinner"));
             Succeeded(4);
         }
 
         [TestMethod]
         public void FifthTest()
         {
-            Assert.AreEqual(true, yourSolution.IsPalindrome("racecar"));
+            Assert.AreEqual(3, yourSolution.CountLowerCasetLetters("!#¤%&/()=abc{[]"));
             Succeeded(5);
         }
 

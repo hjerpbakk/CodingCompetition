@@ -2,17 +2,17 @@ import re
 from datetime import date
 
 # <summary>
-# A palindrome is a word that reads the same backward as forward.
-# You'll write a method which checks whether a word is palindrome.
+# Create a method that counts the number 
+# of lower case letters in a word.
 #
 # Example:
-# anna
+# Runar
 #
 # Return:
-# True
+# 4
 #
 # </summary>
 # <param name="word">The word to check.</param>
-# <returns>Whether this word is a palindrome.</returns>
-def isPalindrome(word):
-    return False
+# <returns>The number of lower case letters in the word.</returns>
+def CountLowerCasetLetters(word):
+    return -1

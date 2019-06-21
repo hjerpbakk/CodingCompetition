@@ -11,23 +11,23 @@ class Problems(unittest.TestCase):
 		cls.testBase = TestBase()
 
 	def test_dips_fact_1(self):
-		self.assertEqual(True, isPalindrome("A"))
+		self.assertEqual(7, CountLowerCasetLetters("FirstTest"))
 		Problems.testBase.Succeeded(1)
 
 	def test_dips_fact_2(self):
-		self.assertEqual(False, isPalindrome("DIPS"))
+		self.assertEqual(0, CountLowerCasetLetters("DIPS"))
 		Problems.testBase.Succeeded(2)
 
 	def test_dips_fact_3(self):
-		self.assertEqual(True, isPalindrome("1331"))
+		self.assertEqual(2, CountLowerCasetLetters("1337 og 1984"))
 		Problems.testBase.Succeeded(3)
 
 	def test_dips_fact_4(self):
-		self.assertEqual(False, isPalindrome("NDC"))
+		self.assertEqual(12, CountLowerCasetLetters("Chicken dinner"))
 		Problems.testBase.Succeeded(4)
 
 	def test_dips_fact_5(self):
-		self.assertEqual(True, isPalindrome("racecar"))
+		self.assertEqual(3, CountLowerCasetLetters("!#¤%&/()=abc{[]"))
 		Problems.testBase.Succeeded(5)
 
 	@classmethod
